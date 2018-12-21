@@ -64,6 +64,14 @@ public class KindergartenApp {
 		printSpecified(children, spec_red_toy);
 		
 		/**
+		 * Let's find all children who like black toys
+		 */
+		
+		Specification<Child> spec_black_toy = new ChildLikesSpecifiedToySpecification(new ToyColorSpecification("Back"));
+		System.out.println("\nChildren who likes some black toys");
+		printSpecified(children, spec_black_toy);
+		
+		/**
 		 * Let's find all children who likes a toy that's not red
 		 */
 		Specification<Child> spec_not_red_toy = new ChildLikesSpecifiedToySpecification(new ToyColorSpecification("Red").not());
